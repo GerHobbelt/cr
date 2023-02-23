@@ -674,9 +674,6 @@ void cr_set_temporary_path(cr_plugin &ctx, const std::string &path) {
 #if defined(CR_WINDOWS)
 
 // clang-format off
-#ifndef WIN32_LEAN_AND_MEAN
-#   define WIN32_LEAN_AND_MEAN
-#endif
 #include <windows.h>
 #include <dbghelp.h>
 // clang-format on

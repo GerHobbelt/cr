@@ -18,7 +18,7 @@ static unsigned int CR_STATE version = 1;
 // A rollback will be effectued and this error can be dealt client side, for exemple, by poping a dialog box asking
 // to force reload cleaning up states (restarting the client from scratch with the new version).
 
-void hello() {
+void hello(void) {
     // this demonstrate how to transfer an state between instances by using CR_STATE tag.
     // in this case, we track a flag to indicate if hello was print or not, so each new reload
     // after the initial one will not print the hello world message.
@@ -32,7 +32,7 @@ void hello() {
 	    fprintf(stdout, "y");
 }
 
-void test_crash() {
+void test_crash(void) {
     int *addr = NULL; (void)addr; // warning
     // to test crash protection, uncomment the following line
     //int i = *addr;
